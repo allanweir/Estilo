@@ -11,6 +11,26 @@ import UIKit
 extension UIButton: TypographyStyleable, TypographyViewStyleable {
     public typealias StyleType = ButtonStyle
     
+    // MARK: - Init
+    
+    public convenience init(title: String, style: ButtonStyle...) {
+        self.init(type: .custom)
+        for subStyle in style {
+            self.apply(styles: subStyle)
+        }
+        self.setTitle(title, for: .normal)
+    }
+    
+    public convenience init(image: UIImage, style: ButtonStyle...) {
+        self.init(type: .custom)
+        for subStyle in style {
+            self.apply(styles: subStyle)
+        }
+        self.setImage(image, for: .normal)
+    }
+    
+    // MARK: - Apply
+    
     public static func apply(toView view: UIButton, styles: ButtonStyle...) {
         styles.forEach { (style) in
             self.apply(toView: view, style: style)
