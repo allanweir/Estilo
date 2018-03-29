@@ -22,6 +22,7 @@ public extension Styles {
         case clearsContextBeforeDrawing(Bool)
         case clipsToBounds(Bool)
         case contentMode(UIViewContentMode)
+        case cornerRadius(CGFloat)
         case frame(CGRect)
         case isHidden(Bool)
         case isOpaque(Bool)
@@ -49,6 +50,7 @@ public extension Styles {
             case (.clearsContextBeforeDrawing, .clearsContextBeforeDrawing): fallthrough
             case (.clipsToBounds, .clipsToBounds): fallthrough
             case (.contentMode, .contentMode): fallthrough
+            case (.cornerRadius, .cornerRadius): fallthrough
             case (.frame, .frame): fallthrough
             case (.isHidden, .isHidden): fallthrough
             case (.isOpaque, .isOpaque): fallthrough

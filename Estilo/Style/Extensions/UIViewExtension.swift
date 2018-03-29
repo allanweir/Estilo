@@ -49,6 +49,8 @@ extension UIView: Styleable {
             view.clipsToBounds = value
         case .contentMode(let value):
             view.contentMode = value
+        case .cornerRadius(let value):
+            view.layer.cornerRadius = value
         case .frame(let value):
             view.frame = value
         case .isHidden(let value):

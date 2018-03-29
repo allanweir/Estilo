@@ -60,6 +60,8 @@ class UIViewExtensionTests: QuickSpec {
                 expect(view.clipsToBounds).to(equal(value))
             case .contentMode(let value):
                 expect(view.contentMode).to(equal(value))
+            case .cornerRadius(let value):
+                expect(view.layer.cornerRadius).to(equal(value))
             case .frame(let value):
                 expect(view.frame).to(equal(value))
             case .isHidden(let value):
