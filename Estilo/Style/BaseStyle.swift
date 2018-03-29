@@ -6,10 +6,8 @@
 //  Copyright © 2018 Studious. All rights reserved.
 //
 
-public class BaseStyle<S: Hashable>: BaseStyleContainer {
+public class BaseStyle<S: StyleProperty>: BaseStyleContainer {
     public typealias T = S
-    
-//    public typealias StyleProperties = [T: Any]
     
     public var globalProperties: StyleProperties
     private var sessionProperties: [(query: Query, properties: StyleProperties)]
@@ -18,21 +16,28 @@ public class BaseStyle<S: Hashable>: BaseStyleContainer {
         var properties: StyleProperties = StyleProperties()
         for sessionQuery in self.sessionProperties {
             if sessionQuery.query.isApplicable() {
-                properties.update(withContentsOf: sessionQuery.properties)
+                properties.append(contentsOf: sessionQuery.properties)
             }
         }
-        return properties
+        return properties.uniqueLatest()
     }
     
     public var allProperties: StyleProperties {
-        return self.globalProperties.updating(withContentsOf: self.queryProperties)
+        var properties = self.globalProperties
+        properties.append(contentsOf: self.queryProperties)
+        return properties.uniqueLatest()
     }
     
     // MARK: - Init
     
     public init(inherits parent: BaseStyle<T>? = nil, properties: StyleProperties) {
-        self.globalProperties = parent?.globalProperties ?? [:]
-        self.globalProperties.update(withContentsOf: properties)
+        if let parent = parent {
+            self.globalProperties = parent.globalProperties
+            self.globalProperties.append(contentsOf: properties)
+            self.globalProperties = self.globalProperties.uniqueLatest()
+        } else {
+            self.globalProperties = properties
+        }
         
         self.sessionProperties = parent?.sessionProperties ?? []
     }
@@ -46,7 +51,8 @@ public class BaseStyle<S: Hashable>: BaseStyleContainer {
     public func query(_ queries: [Query], _ properties: StyleProperties) -> Self {
         for query in queries {
             if query.scope == .device, query.isApplicable() {
-                self.globalProperties.update(withContentsOf: properties)
+                self.globalProperties.append(contentsOf: properties)
+                self.globalProperties = self.globalProperties.uniqueLatest()
             } else {
                 self.sessionProperties.append((query: query, properties: properties))
             }

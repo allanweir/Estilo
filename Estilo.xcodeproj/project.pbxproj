@@ -22,9 +22,12 @@
 		E127DF0C2046E1B300DE80C9 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E127DF022046E1AB00DE80C9 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E127DF0D2046E1B300DE80C9 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E127DEFF2046E1AB00DE80C9 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E127DF0E2046E1B300DE80C9 /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E127DF012046E1AB00DE80C9 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E127DF172046F60200DE80C9 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127DF162046F60200DE80C9 /* Style.swift */; };
+		E127DF172046F60200DE80C9 /* StyleContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127DF162046F60200DE80C9 /* StyleContainer.swift */; };
 		E127DF322048520A00DE80C9 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127DF312048520A00DE80C9 /* Query.swift */; };
-		E1543E0F20569A6100D0F182 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1543E0E20569A6100D0F182 /* DictionaryExtension.swift */; };
+		E1561872206D230C00236ADB /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1561871206D230C00236ADB /* ButtonStyle.swift */; };
+		E1561874206D258500236ADB /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1561873206D258500236ADB /* UIButtonExtension.swift */; };
+		E1561877206D298F00236ADB /* SwitchStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1561876206D298F00236ADB /* SwitchStyle.swift */; };
+		E1561879206D2A5B00236ADB /* UISwitchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1561878206D2A5B00236ADB /* UISwitchExtension.swift */; };
 		E15AEB89205A9DB700598758 /* NSAttributedStringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AEB88205A9DB700598758 /* NSAttributedStringExtensionTests.swift */; };
 		E15AEB8B205A9DC900598758 /* NSMutableAttributedStringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AEB8A205A9DC900598758 /* NSMutableAttributedStringExtensionTests.swift */; };
 		E15AEB8D205A9E7A00598758 /* BaseStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AEB8C205A9E7A00598758 /* BaseStyleTests.swift */; };
@@ -33,23 +36,24 @@
 		E15EFB8720596E7400285A5B /* BaseStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127DF1F2047215B00DE80C9 /* BaseStyle.swift */; };
 		E15EFB8C2059725200285A5B /* TypographyStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127DF222047266600DE80C9 /* TypographyStyle.swift */; };
 		E15EFB8D205973DF00285A5B /* LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127DF112046F5E300DE80C9 /* LabelStyle.swift */; };
-		E15EFB8E205977FA00285A5B /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127DF27204801D000DE80C9 /* NSAttributedStringExtension.swift */; };
-		E15EFB8F205977FA00285A5B /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127DF2A204845CF00DE80C9 /* NSMutableAttributedStringExtension.swift */; };
-		E15EFB90205977FA00285A5B /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127DF1920471B3000DE80C9 /* UILabelExtension.swift */; };
 		E15EFB912059780800285A5B /* Styleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127DF1C2047213900DE80C9 /* Styleable.swift */; };
-		E15EFB9320597BB400285A5B /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15EFB9220597BB400285A5B /* Parser.swift */; };
-		E15EFB97205984E800285A5B /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15EFB96205984E800285A5B /* ParserTests.swift */; };
+		E166C87B2061732C00B344EA /* UIViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E166C87A2061732C00B344EA /* UIViewExtensionTests.swift */; };
 		E16978D020599D6500C64BD1 /* DeviceOrientationQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16978CF20599D6500C64BD1 /* DeviceOrientationQuery.swift */; };
 		E16DDBEF2046C994001F1D2B /* Estilo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16DDBE52046C994001F1D2B /* Estilo.framework */; };
 		E16DDBF62046C995001F1D2B /* Estilo.h in Headers */ = {isa = PBXBuildFile; fileRef = E16DDBE82046C994001F1D2B /* Estilo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E17E8537204D8AA300DD4C4B /* DeviceTypeQueryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E8536204D8AA300DD4C4B /* DeviceTypeQueryTests.swift */; };
 		E17E853F204D922F00DD4C4B /* DeviceScreenWidthQueryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E853E204D922F00DD4C4B /* DeviceScreenWidthQueryTests.swift */; };
 		E17E8541204D92B600DD4C4B /* DeviceScreenScaleQueryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E8540204D92B500DD4C4B /* DeviceScreenScaleQueryTests.swift */; };
-		E17E8545204DCA5500DD4C4B /* UILabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E8544204DCA5500DD4C4B /* UILabelTests.swift */; };
+		E17E8545204DCA5500DD4C4B /* UILabelExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17E8544204DCA5500DD4C4B /* UILabelExtensionTests.swift */; };
 		E1873848204DEA9F00E862BF /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E127DF012046E1AB00DE80C9 /* SnapKit.framework */; };
 		E1ACB15D2046E12C00D2A8E6 /* Estilo.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E16DDBE52046C994001F1D2B /* Estilo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E1D6B90020601BD200650F5C /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6B8FF20601BD200650F5C /* ViewStyle.swift */; };
-		E1D6B90220601F1500650F5C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6B90120601F1500650F5C /* UIViewExtension.swift */; };
+		E1E34C53206127EE009426CA /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127DF27204801D000DE80C9 /* NSAttributedStringExtension.swift */; };
+		E1E34C54206128E7009426CA /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127DF2A204845CF00DE80C9 /* NSMutableAttributedStringExtension.swift */; };
+		E1E34C55206128F0009426CA /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D6B90120601F1500650F5C /* UIViewExtension.swift */; };
+		E1E34C5620612903009426CA /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127DF1920471B3000DE80C9 /* UILabelExtension.swift */; };
+		E1E34C5820613127009426CA /* SequenceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E34C5720613127009426CA /* SequenceExtension.swift */; };
+		E1FAA7CC2061896E002F1486 /* TypographyStyleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAA7CB2061896E002F1486 /* TypographyStyleable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +96,7 @@
 		E127DF012046E1AB00DE80C9 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		E127DF022046E1AB00DE80C9 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		E127DF112046F5E300DE80C9 /* LabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyle.swift; sourceTree = "<group>"; };
-		E127DF162046F60200DE80C9 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		E127DF162046F60200DE80C9 /* StyleContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleContainer.swift; sourceTree = "<group>"; };
 		E127DF1920471B3000DE80C9 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		E127DF1C2047213900DE80C9 /* Styleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styleable.swift; sourceTree = "<group>"; };
 		E127DF1F2047215B00DE80C9 /* BaseStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStyle.swift; sourceTree = "<group>"; };
@@ -100,14 +104,16 @@
 		E127DF27204801D000DE80C9 /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
 		E127DF2A204845CF00DE80C9 /* NSMutableAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtension.swift; sourceTree = "<group>"; };
 		E127DF312048520A00DE80C9 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
-		E1543E0E20569A6100D0F182 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		E1561871206D230C00236ADB /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		E1561873206D258500236ADB /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		E1561876206D298F00236ADB /* SwitchStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchStyle.swift; sourceTree = "<group>"; };
+		E1561878206D2A5B00236ADB /* UISwitchExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISwitchExtension.swift; sourceTree = "<group>"; };
 		E15AEB88205A9DB700598758 /* NSAttributedStringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensionTests.swift; sourceTree = "<group>"; };
 		E15AEB8A205A9DC900598758 /* NSMutableAttributedStringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtensionTests.swift; sourceTree = "<group>"; };
 		E15AEB8C205A9E7A00598758 /* BaseStyleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStyleTests.swift; sourceTree = "<group>"; };
 		E15AEB8E205A9E8500598758 /* TypographyStyleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyStyleTests.swift; sourceTree = "<group>"; };
 		E15AEB90205A9E8F00598758 /* LabelStyleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyleTests.swift; sourceTree = "<group>"; };
-		E15EFB9220597BB400285A5B /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		E15EFB96205984E800285A5B /* ParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
+		E166C87A2061732C00B344EA /* UIViewExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionTests.swift; sourceTree = "<group>"; };
 		E16978CF20599D6500C64BD1 /* DeviceOrientationQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceOrientationQuery.swift; sourceTree = "<group>"; };
 		E16DDBE52046C994001F1D2B /* Estilo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Estilo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E16DDBE82046C994001F1D2B /* Estilo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Estilo.h; sourceTree = "<group>"; };
@@ -117,9 +123,11 @@
 		E17E8536204D8AA300DD4C4B /* DeviceTypeQueryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTypeQueryTests.swift; sourceTree = "<group>"; };
 		E17E853E204D922F00DD4C4B /* DeviceScreenWidthQueryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceScreenWidthQueryTests.swift; sourceTree = "<group>"; };
 		E17E8540204D92B500DD4C4B /* DeviceScreenScaleQueryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceScreenScaleQueryTests.swift; sourceTree = "<group>"; };
-		E17E8544204DCA5500DD4C4B /* UILabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelTests.swift; sourceTree = "<group>"; };
+		E17E8544204DCA5500DD4C4B /* UILabelExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensionTests.swift; sourceTree = "<group>"; };
 		E1D6B8FF20601BD200650F5C /* ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
 		E1D6B90120601F1500650F5C /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		E1E34C5720613127009426CA /* SequenceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtension.swift; sourceTree = "<group>"; };
+		E1FAA7CB2061896E002F1486 /* TypographyStyleable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyStyleable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,9 +179,9 @@
 		E127DF102046F5D900DE80C9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				E127DF162046F60200DE80C9 /* Style.swift */,
+				E127DF162046F60200DE80C9 /* StyleContainer.swift */,
 				E127DF1C2047213900DE80C9 /* Styleable.swift */,
-				E15EFB9220597BB400285A5B /* Parser.swift */,
+				E1FAA7CB2061896E002F1486 /* TypographyStyleable.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -197,18 +205,10 @@
 		E127DF2D20484EA400DE80C9 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
-				E1543E0E20569A6100D0F182 /* DictionaryExtension.swift */,
+				E1E34C5720613127009426CA /* SequenceExtension.swift */,
 				E10FA9512049B63A004FBDF8 /* UIDeviceExtension.swift */,
 			);
 			path = Internal;
-			sourceTree = "<group>";
-		};
-		E15EFB95205984DD00285A5B /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				E15EFB96205984E800285A5B /* ParserTests.swift */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		E16DDBDB2046C994001F1D2B = {
@@ -246,7 +246,6 @@
 		E16DDBF22046C995001F1D2B /* EstiloTests */ = {
 			isa = PBXGroup;
 			children = (
-				E15EFB95205984DD00285A5B /* Core */,
 				E17E8542204DCA4300DD4C4B /* Style */,
 				E17E8533204D8A2900DD4C4B /* Queries */,
 				E16DDBF52046C995001F1D2B /* Info.plist */,
@@ -271,7 +270,9 @@
 				E17E8535204D8A6700DD4C4B /* Extensions */,
 				E127DF1F2047215B00DE80C9 /* BaseStyle.swift */,
 				E127DF222047266600DE80C9 /* TypographyStyle.swift */,
+				E1561871206D230C00236ADB /* ButtonStyle.swift */,
 				E127DF112046F5E300DE80C9 /* LabelStyle.swift */,
+				E1561876206D298F00236ADB /* SwitchStyle.swift */,
 				E1D6B8FF20601BD200650F5C /* ViewStyle.swift */,
 			);
 			path = Style;
@@ -282,7 +283,9 @@
 			children = (
 				E127DF27204801D000DE80C9 /* NSAttributedStringExtension.swift */,
 				E127DF2A204845CF00DE80C9 /* NSMutableAttributedStringExtension.swift */,
+				E1561873206D258500236ADB /* UIButtonExtension.swift */,
 				E127DF1920471B3000DE80C9 /* UILabelExtension.swift */,
+				E1561878206D2A5B00236ADB /* UISwitchExtension.swift */,
 				E1D6B90120601F1500650F5C /* UIViewExtension.swift */,
 			);
 			path = Extensions;
@@ -304,7 +307,8 @@
 			children = (
 				E15AEB88205A9DB700598758 /* NSAttributedStringExtensionTests.swift */,
 				E15AEB8A205A9DC900598758 /* NSMutableAttributedStringExtensionTests.swift */,
-				E17E8544204DCA5500DD4C4B /* UILabelTests.swift */,
+				E17E8544204DCA5500DD4C4B /* UILabelExtensionTests.swift */,
+				E166C87A2061732C00B344EA /* UIViewExtensionTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -441,23 +445,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E15EFB8E205977FA00285A5B /* NSAttributedStringExtension.swift in Sources */,
 				E16978D020599D6500C64BD1 /* DeviceOrientationQuery.swift in Sources */,
+				E1561874206D258500236ADB /* UIButtonExtension.swift in Sources */,
 				E10FA95B2049C279004FBDF8 /* DeviceScreenScaleQuery.swift in Sources */,
-				E15EFB90205977FA00285A5B /* UILabelExtension.swift in Sources */,
+				E1E34C54206128E7009426CA /* NSMutableAttributedStringExtension.swift in Sources */,
 				E127DF322048520A00DE80C9 /* Query.swift in Sources */,
 				E15EFB912059780800285A5B /* Styleable.swift in Sources */,
 				E1D6B90020601BD200650F5C /* ViewStyle.swift in Sources */,
-				E15EFB8F205977FA00285A5B /* NSMutableAttributedStringExtension.swift in Sources */,
-				E127DF172046F60200DE80C9 /* Style.swift in Sources */,
+				E1561879206D2A5B00236ADB /* UISwitchExtension.swift in Sources */,
+				E1561872206D230C00236ADB /* ButtonStyle.swift in Sources */,
+				E127DF172046F60200DE80C9 /* StyleContainer.swift in Sources */,
 				E10FA9572049C245004FBDF8 /* DeviceTypeQuery.swift in Sources */,
-				E1D6B90220601F1500650F5C /* UIViewExtension.swift in Sources */,
-				E1543E0F20569A6100D0F182 /* DictionaryExtension.swift in Sources */,
+				E1E34C53206127EE009426CA /* NSAttributedStringExtension.swift in Sources */,
 				E15EFB8720596E7400285A5B /* BaseStyle.swift in Sources */,
 				E10FA9622049C48B004FBDF8 /* CGFloatExtension.swift in Sources */,
+				E1E34C5820613127009426CA /* SequenceExtension.swift in Sources */,
+				E1561877206D298F00236ADB /* SwitchStyle.swift in Sources */,
+				E1E34C5620612903009426CA /* UILabelExtension.swift in Sources */,
 				E10FA9522049B63A004FBDF8 /* UIDeviceExtension.swift in Sources */,
+				E1E34C55206128F0009426CA /* UIViewExtension.swift in Sources */,
 				E10FA95D2049C2AD004FBDF8 /* UIColorExtension.swift in Sources */,
-				E15EFB9320597BB400285A5B /* Parser.swift in Sources */,
+				E1FAA7CC2061896E002F1486 /* TypographyStyleable.swift in Sources */,
 				E15EFB8C2059725200285A5B /* TypographyStyle.swift in Sources */,
 				E15EFB8D205973DF00285A5B /* LabelStyle.swift in Sources */,
 				E10FA9592049C25F004FBDF8 /* DeviceScreenWidthQuery.swift in Sources */,
@@ -469,13 +477,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E15AEB91205A9E8F00598758 /* LabelStyleTests.swift in Sources */,
-				E17E8545204DCA5500DD4C4B /* UILabelTests.swift in Sources */,
+				E17E8545204DCA5500DD4C4B /* UILabelExtensionTests.swift in Sources */,
 				E17E8541204D92B600DD4C4B /* DeviceScreenScaleQueryTests.swift in Sources */,
 				E15AEB8B205A9DC900598758 /* NSMutableAttributedStringExtensionTests.swift in Sources */,
 				E15AEB8D205A9E7A00598758 /* BaseStyleTests.swift in Sources */,
+				E166C87B2061732C00B344EA /* UIViewExtensionTests.swift in Sources */,
 				E15AEB8F205A9E8500598758 /* TypographyStyleTests.swift in Sources */,
 				E1143512205A78C900BDCECB /* DeviceOrientationQueryTests.swift in Sources */,
-				E15EFB97205984E800285A5B /* ParserTests.swift in Sources */,
 				E17E8537204D8AA300DD4C4B /* DeviceTypeQueryTests.swift in Sources */,
 				E17E853F204D922F00DD4C4B /* DeviceScreenWidthQueryTests.swift in Sources */,
 				E15AEB89205A9DB700598758 /* NSAttributedStringExtensionTests.swift in Sources */,

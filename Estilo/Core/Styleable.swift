@@ -11,20 +11,8 @@ public protocol Styleable {
     
     static func apply(toView view: Self, styles: StyleType...)
     static func apply(toView view: Self, style: StyleType)
+    static func apply(toView view: Self, property: StyleType.T)
     
     mutating func apply(styles: StyleType...)
     mutating func apply(style: StyleType)
-}
-
-public protocol TypographyStyleable {
-    
-    func apply(styles: TypographyStyle...)
-    func apply(style: TypographyStyle)
-}
-
-public protocol TypographyViewStyleable: TypographyStyleable {
-    
-    static func apply(toView view: Self, styles: TypographyStyle...)
-    static func apply(toView view: Self, style: TypographyStyle)
-    
 }

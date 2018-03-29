@@ -1,5 +1,5 @@
 //
-//  Style.swift
+//  StyleContainer.swift
 //  Estilo
 //
 //  Created by Allan Weir on 28/02/2018.
@@ -7,8 +7,8 @@
 //
 
 public protocol BaseStyleContainer {
-    associatedtype T: Hashable
-    typealias StyleProperties = [T: Any]
+    associatedtype T: StyleProperty
+    typealias StyleProperties = [T]
     
     var globalProperties: StyleProperties { get set }
     var queryProperties: StyleProperties { get }
@@ -23,16 +23,10 @@ public protocol StyleContainer: BaseStyleContainer {
     init(inherits parent: Self?, properties: StyleProperties)
 }
 
-
 public struct Styles {
     
 }
 
-
-protocol PropertyName: Hashable {
+public protocol StyleProperty: Equatable {
     
-}
-
-enum TestPropertyType: String, PropertyName {
-    case test
 }

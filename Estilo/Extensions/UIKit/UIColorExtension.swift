@@ -36,7 +36,7 @@ public extension UIColor {
      @param modifier - A math function (+, -, *, /)
      @param value - The value to apply against the original color property value
      */
-    public func colorWith(_ property: ColorProperty, _ modifier: CGFloat.OperatorFunction, _ value: CGFloat) -> UIColor {
+    public func colorWith(_ property: UIColor.ColorProperty, _ modifier: CGFloat.OperatorFunction, _ value: CGFloat) -> UIColor {
         var h: CGFloat = 0
         var s: CGFloat = 0
         var b: CGFloat = 0

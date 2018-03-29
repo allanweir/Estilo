@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UILabel: Styleable, TypographyStyleable, TypographyViewStyleable {
+extension UILabel: TypographyStyleable, TypographyViewStyleable {
     public typealias StyleType = LabelStyle
     
     // MARK: - Apply to object
@@ -20,25 +20,48 @@ extension UILabel: Styleable, TypographyStyleable, TypographyViewStyleable {
     }
     
     public static func apply(toView view: UILabel, style: LabelStyle) {
-        for (property, value) in style.allProperties {
-            switch property {
-            case .typography:
-                if let typography: TypographyStyle = Parser.parse(value) {
-                    self.apply(toView: view, style: typography)
-                }
-            case .textColor:
-                view.textColor = Parser.parse(value)
-            case .textAlignment:
-                view.textAlignment = Parser.parse(value) ?? view.textAlignment
-            case .numberOfLines:
-                view.numberOfLines = Parser.parse(value) ?? view.numberOfLines
-            case .backgroundColor: fallthrough
-            case .borderColor: fallthrough
-            case .borderWidth:
-                if let style = Styles.View(rawValue: property.rawValue) {
-                    
-                }
-            }
+        for property in style.allProperties {
+            self.apply(toView: view, property: property)
+        }
+    }
+    
+    public static func apply(toView view: UILabel, property: Styles.Label) {
+        switch property {
+        case .view(let value):
+            self.apply(toView: view, style: value)
+        case .typography(let value):
+            self.apply(toView: view, style: value)
+        case .viewProperty(let value):
+            self.apply(toView: view, property: value)
+        
+        case .allowsDefaultTighteningForTruncation(let value):
+            view.allowsDefaultTighteningForTruncation = value
+        case .adjustsFontSizeToFitWidth(let value):
+            view.adjustsFontSizeToFitWidth = value
+        case .baselineAdjustment(let value):
+            view.baselineAdjustment = value
+        case .font(let value):
+            view.font = value
+        case .highlightedTextColor(let value):
+            view.highlightedTextColor = value
+        case .isHighlighted(let value):
+            view.isHighlighted = value
+        case .lineBreakMode(let value):
+            view.lineBreakMode = value
+        case .minimumScaleFactor(let value):
+            view.minimumScaleFactor = value
+        case .numberOfLines(let value):
+            view.numberOfLines = value
+        case .preferredMaxLayoutWidth(let value):
+            view.preferredMaxLayoutWidth = value
+        case .shadowColor(let value):
+            view.shadowColor = value
+        case .shadowOffset(let value):
+            view.shadowOffset = value
+        case .textAlignment(let value):
+            view.textAlignment = value
+        case .textColor(let value):
+            view.textColor = value
         }
     }
     
@@ -62,17 +85,17 @@ extension UILabel: Styleable, TypographyStyleable, TypographyViewStyleable {
     }
     
     public static func apply(toView view: UILabel, style: TypographyStyle) {
-        for (property, value) in style.allProperties {
+        for property in style.allProperties {
             switch property {
-            case .backgroundColor:
-                view.backgroundColor = Parser.parse(value)
-            case .font:
-                view.font = Parser.parse(value)
-            case .foregroundColor, .textColor:
-                view.textColor = Parser.parse(value)
-            case .paragraphStyle:
-                // TODO: Take attributes from paragraph style
-                break
+            case .backgroundColor(let value):
+                view.backgroundColor = value
+            case .font(let value):
+                view.font = value
+            case .foregroundColor(let value):
+                view.textColor = value
+            case .paragraphStyle(let value):
+                view.textAlignment = value.alignment
+                view.lineBreakMode = value.lineBreakMode
             case .attachment: fallthrough
             case .baselineOffset: fallthrough
             case .expansion: fallthrough

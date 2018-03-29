@@ -10,31 +10,58 @@ import UIKit
 
 public extension Styles {
     
-    public enum Typography: String {
-        case attachment
-        case backgroundColor
-        case baselineOffset
-        case expansion
-        case font
-        case foregroundColor
-        case kern
-        case ligature
-        case link
-        case obliqueness
-        case paragraphStyle
-        case shadow
-        case strikethroughColor
-        case strikethroughStyle
-        case strokeColor
-        case strokeWidth
-        case textEffect
-        case underlineColor
-        case underlineStyle
-        case verticalGlyphForm
-        case writingDirection
+    public enum Typography: StyleProperty {
+        case attachment(NSTextAttachment)
+        case backgroundColor(UIColor)
+        case baselineOffset(CGFloat)
+        case expansion(CGFloat)
+        case font(UIFont)
+        case foregroundColor(UIColor)
+        case kern(CGFloat)
+        case ligature(Int)
+        case link(URL)
+        case obliqueness(CGFloat)
+        case paragraphStyle(NSParagraphStyle)
+        case shadow(NSShadow)
+        case strikethroughColor(UIColor)
+        case strikethroughStyle(NSUnderlineStyle) //TODO Check
+        case strokeColor(UIColor)
+        case strokeWidth(CGFloat)
+        case textEffect(NSAttributedString.TextEffectStyle)
+        case underlineColor(UIColor)
+        case underlineStyle(NSUnderlineStyle)
+        case verticalGlyphForm(Int)
+        case writingDirection(NSNumber)// TODO Check
         
-        // Convenience duplicates
-        case textColor //foregroundColor
+        public static func ==(lhs: Styles.Typography, rhs: Styles.Typography) -> Bool {
+            switch (lhs, rhs) {
+            case (.attachment, .attachment): fallthrough
+            case (.backgroundColor, .backgroundColor): fallthrough
+            case (.baselineOffset, .baselineOffset): fallthrough
+            case (.expansion, .expansion): fallthrough
+            case (.font, .font): fallthrough
+            case (.foregroundColor, .foregroundColor): fallthrough
+            case (.kern, .kern): fallthrough
+            case (.ligature, .ligature): fallthrough
+            case (.link, .link): fallthrough
+            case (.obliqueness, .obliqueness): fallthrough
+            case (.paragraphStyle, .paragraphStyle): fallthrough
+            case (.shadow, .shadow): fallthrough
+            case (.strikethroughColor, .strikethroughColor): fallthrough
+            case (.strikethroughStyle, .strikethroughStyle): fallthrough
+            case (.strokeColor, .strokeColor): fallthrough
+            case (.strokeWidth, .strokeWidth): fallthrough
+            case (.textEffect, .textEffect): fallthrough
+            case (.underlineColor, .underlineColor): fallthrough
+            case (.underlineStyle, .underlineStyle): fallthrough
+            case (.verticalGlyphForm, .verticalGlyphForm): fallthrough
+            case (.writingDirection, .writingDirection):
+                return true
+            default:
+                return false
+            }
+        }
+        
     }
 }
 
