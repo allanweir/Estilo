@@ -25,8 +25,6 @@ public extension Styles {
             case (.isOn, .isOn): fallthrough
             case (.thumbTintColor, .thumbTintColor): fallthrough
             case (.tintColor, .tintColor): fallthrough
-            case (.offImage, .offImage): fallthrough
-            case (.onImage, .onImage): fallthrough
             case (.onTintColor, .onTintColor):
                 return true
             case (.viewProperty(let lhsProperty), viewProperty(let rhsProperty)):
