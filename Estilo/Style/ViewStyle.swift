@@ -10,9 +10,9 @@ import UIKit
 
 public extension Styles {
 
-    public enum View: StyleProperty {
+    enum View: StyleProperty {
         case alpha(CGFloat)
-        case autoresizingMask(UIViewAutoresizing)
+        case autoresizingMask(UIView.AutoresizingMask)
         case autoresizesSubviews(Bool)
         case backgroundColor(UIColor)
         case borderColor(UIColor)
@@ -21,7 +21,7 @@ public extension Styles {
         case center(CGPoint)
         case clearsContextBeforeDrawing(Bool)
         case clipsToBounds(Bool)
-        case contentMode(UIViewContentMode)
+        case contentMode(UIView.ContentMode)
         case cornerRadius(CGFloat)
         case frame(CGRect)
         case isHidden(Bool)
@@ -31,7 +31,7 @@ public extension Styles {
         case isUserInteractionEnabled(Bool)
         case transform(CGAffineTransform)
         case tintColor(UIColor)
-        case tintAdjustmentMode(UIViewTintAdjustmentMode)
+        case tintAdjustmentMode(UIView.TintAdjustmentMode)
         
         //TODO
         //case mask

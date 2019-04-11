@@ -10,7 +10,7 @@ import UIKit
 
 public extension Styles {
     
-    public enum Switch: StyleProperty {
+    enum Switch: StyleProperty {
         case view(ViewStyle)
         case viewProperty(View)
         

@@ -20,20 +20,20 @@ extension NSAttributedString {
     }
     
     public convenience init(str: String, styles: TypographyStyle...) {
-        var attributes: [NSAttributedStringKey: Any] = [:]
+        var attributes: [NSAttributedString.Key: Any] = [:]
         styles.forEach { (style) in
             NSAttributedString.update(attributes: &attributes, from: style)
         }
         self.init(string: str, attributes: attributes)
     }
     
-    static func createAttributes(from typography: TypographyStyle) -> [NSAttributedStringKey: Any] {
-        var attributes: [NSAttributedStringKey: Any] = [:]
+    static func createAttributes(from typography: TypographyStyle) -> [NSAttributedString.Key: Any] {
+        var attributes: [NSAttributedString.Key: Any] = [:]
         self.update(attributes: &attributes, from: typography)
         return attributes
     }
     
-    static func update(attributes: inout [NSAttributedStringKey: Any], from typography: TypographyStyle) {
+    static func update(attributes: inout [NSAttributedString.Key: Any], from typography: TypographyStyle) {
         for property in typography.allProperties {
             switch property {
             case .attachment(let value):

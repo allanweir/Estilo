@@ -27,7 +27,7 @@ extension NSMutableAttributedString: TypographyStyleable {
     // MARK: - Convenience methods for target a range
     
     public func apply(styles: [TypographyStyle], toRange range: NSRange) {
-        var attributes: [NSAttributedStringKey: Any] = [:]
+        var attributes: [NSAttributedString.Key: Any] = [:]
         styles.forEach { (style) in
             NSMutableAttributedString.update(attributes: &attributes, from: style)
         }

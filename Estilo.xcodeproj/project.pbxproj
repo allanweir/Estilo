@@ -15,10 +15,7 @@
 		E10FA9622049C48B004FBDF8 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10FA9612049C48B004FBDF8 /* CGFloatExtension.swift */; };
 		E1143512205A78C900BDCECB /* DeviceOrientationQueryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1143511205A78C900BDCECB /* DeviceOrientationQueryTests.swift */; };
 		E127DF042046E1AB00DE80C9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E127DEFF2046E1AB00DE80C9 /* Quick.framework */; };
-		E127DF052046E1AB00DE80C9 /* Log.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E127DF002046E1AB00DE80C9 /* Log.framework */; };
-		E127DF062046E1AB00DE80C9 /* Log.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E127DF002046E1AB00DE80C9 /* Log.framework */; };
 		E127DF0A2046E1AB00DE80C9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E127DF022046E1AB00DE80C9 /* Nimble.framework */; };
-		E127DF0B2046E1B300DE80C9 /* Log.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E127DF002046E1AB00DE80C9 /* Log.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E127DF0C2046E1B300DE80C9 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E127DF022046E1AB00DE80C9 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E127DF0D2046E1B300DE80C9 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E127DEFF2046E1AB00DE80C9 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E127DF0E2046E1B300DE80C9 /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E127DF012046E1AB00DE80C9 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -73,7 +70,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E127DF0B2046E1B300DE80C9 /* Log.framework in CopyFiles */,
 				E127DF0C2046E1B300DE80C9 /* Nimble.framework in CopyFiles */,
 				E127DF0D2046E1B300DE80C9 /* Quick.framework in CopyFiles */,
 				E127DF0E2046E1B300DE80C9 /* SnapKit.framework in CopyFiles */,
@@ -92,7 +88,6 @@
 		E10FA9612049C48B004FBDF8 /* CGFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
 		E1143511205A78C900BDCECB /* DeviceOrientationQueryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceOrientationQueryTests.swift; sourceTree = "<group>"; };
 		E127DEFF2046E1AB00DE80C9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		E127DF002046E1AB00DE80C9 /* Log.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Log.framework; path = Carthage/Build/iOS/Log.framework; sourceTree = "<group>"; };
 		E127DF012046E1AB00DE80C9 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		E127DF022046E1AB00DE80C9 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		E127DF112046F5E300DE80C9 /* LabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyle.swift; sourceTree = "<group>"; };
@@ -135,7 +130,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E127DF052046E1AB00DE80C9 /* Log.framework in Frameworks */,
 				E1873848204DEA9F00E862BF /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,7 +141,6 @@
 				E127DF0A2046E1AB00DE80C9 /* Nimble.framework in Frameworks */,
 				E127DF042046E1AB00DE80C9 /* Quick.framework in Frameworks */,
 				E16DDBEF2046C994001F1D2B /* Estilo.framework in Frameworks */,
-				E127DF062046E1AB00DE80C9 /* Log.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +317,6 @@
 		E1ACB1612046E15F00D2A8E6 /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
-				E127DF002046E1AB00DE80C9 /* Log.framework */,
 				E127DF022046E1AB00DE80C9 /* Nimble.framework */,
 				E127DEFF2046E1AB00DE80C9 /* Quick.framework */,
 				E127DF012046E1AB00DE80C9 /* SnapKit.framework */,
@@ -395,11 +387,12 @@
 				TargetAttributes = {
 					E16DDBE42046C994001F1D2B = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					E16DDBED2046C994001F1D2B = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -622,9 +615,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BT9P52Z4V8;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -640,7 +634,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -652,6 +646,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BT9P52Z4V8;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -666,7 +661,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.studious.Estilo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -676,6 +671,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BT9P52Z4V8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -684,7 +680,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.studious.EstiloTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -694,6 +690,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BT9P52Z4V8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -702,7 +699,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.studious.EstiloTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

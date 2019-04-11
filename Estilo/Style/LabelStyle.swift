@@ -10,7 +10,7 @@ import UIKit
 
 public extension Styles {
     
-    public enum Label: StyleProperty {
+    enum Label: StyleProperty {
         case view(ViewStyle)
         case viewProperty(View)
         case typography(TypographyStyle)

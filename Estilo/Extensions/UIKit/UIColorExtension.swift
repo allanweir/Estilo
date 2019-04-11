@@ -10,14 +10,14 @@ import UIKit
 
 public extension UIColor {
     
-    public enum ColorProperty {
+    enum ColorProperty {
         case saturation
         case brightness
         case hue
         case alpha
     }
     
-    public convenience init(rgb: UInt) {
+    convenience init(rgb: UInt) {
         self.init(
             red: CGFloat((rgb & 0xFF0000) >> 16) / 255,
             green: CGFloat((rgb & 0x00FF00) >> 8) / 255,
@@ -36,7 +36,7 @@ public extension UIColor {
      @param modifier - A math function (+, -, *, /)
      @param value - The value to apply against the original color property value
      */
-    public func colorWith(_ property: UIColor.ColorProperty, _ modifier: CGFloat.OperatorFunction, _ value: CGFloat) -> UIColor {
+    func colorWith(_ property: UIColor.ColorProperty, _ modifier: CGFloat.OperatorFunction, _ value: CGFloat) -> UIColor {
         var h: CGFloat = 0
         var s: CGFloat = 0
         var b: CGFloat = 0

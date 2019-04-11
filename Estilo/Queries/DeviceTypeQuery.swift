@@ -23,9 +23,9 @@ public struct DeviceTypeQuery: Query {
     }
     
     public func isApplicable() -> Bool {
-        if UIDevice.isiPhone, self.deviceType.contains(.iPhone) {
+        if UIDevice.current.isiPhone, self.deviceType.contains(.iPhone) {
             return true
-        } else if UIDevice.isiPad, self.deviceType.contains(.iPad) {
+        } else if UIDevice.current.isiPad, self.deviceType.contains(.iPad) {
             return true
         }
         return false

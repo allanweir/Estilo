@@ -10,12 +10,12 @@ import UIKit
 
 extension UIDevice {
     
-    static var isiPhone: Bool {
-        return UIDevice.current.userInterfaceIdiom == .phone
+    var isiPhone: Bool {
+        return self.userInterfaceIdiom == .phone
     }
     
-    static var isiPad: Bool {
-        return UIDevice.current.userInterfaceIdiom == .pad
+    var isiPad: Bool {
+        return self.userInterfaceIdiom == .pad
     }
     
 }

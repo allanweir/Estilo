@@ -10,7 +10,7 @@ import UIKit
 
 public extension Styles {
     
-    public enum Button: StyleProperty {
+    enum Button: StyleProperty {
         case view(ViewStyle)
         case viewProperty(View)
         case label(LabelStyle)
@@ -19,17 +19,17 @@ public extension Styles {
         
         case adjustsImageWhenHighlighted(Bool)
         case adjustsImageWhenHDisabled(Bool)
-        case backgroundImage(UIImage, UIControlState)
+        case backgroundImage(UIImage, UIControl.State)
         case contentEdgeInsets(UIEdgeInsets)
-        case image(UIImage, UIControlState)
+        case image(UIImage, UIControl.State)
         case imageEdgeInsets(UIEdgeInsets)
         case reversesTitleShadowWhenHighlighted(Bool)
         case showsTouchWhenHighlighted(Bool)
         case tintColor(UIColor)
-        case title(String, UIControlState)
-        case titleColor(UIColor, UIControlState)
+        case title(String, UIControl.State)
+        case titleColor(UIColor, UIControl.State)
         case titleEdgeInsets(UIEdgeInsets)
-        case titleShadowColor(UIColor, UIControlState)
+        case titleShadowColor(UIColor, UIControl.State)
         
         public static func ==(lhs: Styles.Button, rhs: Styles.Button) -> Bool {
             switch (lhs, rhs) {
